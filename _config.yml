@@ -24,10 +24,10 @@ repository               : "johannesbahrenberg/johannesbahrenberg.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Johannes Bahrenberg"
   pronouns         : # example: "she/her"  
   bio              : "Computational Astrophysicist"
-  location         : "Königstuhl 17, Heidelberg"
+  location         : "Königstuhl 17, 69117 Heidelberg"
   employer         : "Max-Planck-Institut für Astronomie"
   uri              : # URL
   email            : "bahrenberg@mpia.de" 
@@ -51,7 +51,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "academicpages"
+  github           : "johannesbahrenberg"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
