@@ -1,9 +1,9 @@
 ---
-title: "Teaching experience 2"
+title: "Physics Lab Course"
 collection: teaching
-type: "Workshop"
+type: "Teaching"
 permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
+venue: "Ruprecht-Karls-Universität Heidelberg, Fakultät für Physik und Astronomie"
 date: 2015-01-01
 location: "City, Country"
 ---
