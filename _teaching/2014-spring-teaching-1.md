@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2014-spring-teaching-1
 venue: "Ruprecht-Karls-Universität, Fakultät für Physik und Astronomie"
-date: 2024-10
+date: 2024-10-01
 location: "Heidelberg, Germany"
 ---
 
