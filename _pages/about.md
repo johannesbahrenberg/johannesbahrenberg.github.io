@@ -1,15 +1,40 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Tracking the Formation of Planets Through Numerical Simulations"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+I'm curious about protoplanetary disk evolution and, ultimately, planet formation.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+1. 3D adaptive grid hydrodynamics simulations
+1. Non-ideal magneto-hydrodynamics simulations
+1. Radiative transfer simulations
+
+
+The growth of young terrestrial planets
+======
+Studying the growth of Super-Earths.
+
+
+Non-ideal magneto-hydrodynamics (MHD) of the inner protoplanetary disk
+======
+With analytical temperature profile and magnetic flux transport.
+
+
+Isothermal-convective atmosphere models and their effect on exoplanetary interiors
+======
+Creating better training data for the neural network ExoMDN.
+
+
+Radiative transfer in warped protoplanetary disks
+======
+Preparing of observations of warped disks.
+
+
+
 
 A data-driven personal website
 ======
