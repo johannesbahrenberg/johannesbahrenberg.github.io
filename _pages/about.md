@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student at the Max Planck Institute for Astronomy in Heidelberg. My research focuses on the evolution of protoplanetary disks and the processes that ultimately lead to planet formation. I am particularly interested in numerical simulations, with a focus on:
+I am a PhD student at the Max Planck Institute for Astronomy in Heidelberg. My curious about the evolution of protoplanetary disks and the processes that ultimately lead to planet formation. For this, I'm using numerical simulations, with a focus on:
 
 1. 3D adaptive grid hydrodynamics
 1. Non-ideal magneto-hydrodynamics
