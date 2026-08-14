@@ -7,15 +7,22 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student at the Max Planck Institute for Astronomy in Heidelberg. My curious about the evolution of protoplanetary disks and the processes that ultimately lead to planet formation. For this, I'm using numerical simulations, with a focus on:
+Hey. I'm a member of the RAPTOR group of Dr. Mario Flock. We are specialized in high performance computing of the evolution of protoplanetary disks with radiative transfer, hydrodynamics, and magnetohydrodynamics (MHD) simulations.
 
-1. 3D adaptive grid hydrodynamics
-1. Non-ideal magneto-hydrodynamics
-1. Radiative transfer
+The focus of my PhD lies in understanding how magnetic fields of different strengths influence the inner disk (<10 au) evolution and ultimately drive planet formation.
 
-<img src="/images/background.png"
-     alt="Simulation of the density and magnetic field evolution of a protoplanetary disk"
-     style="width: 300%;">
+<figure>
+  <img src="/images/background.png"
+       alt="Simulation of the density and magnetic field evolution of a protoplanetary disk"
+       style="width: 300%;">
+
+  <figcaption>
+    MHD simulation of the poloidal magnetic field (left) and density (right) evolution of a protoplanetary disk with logarithmic color scaling. The density is smeared out along the poloidal velocity stream via line integrated convolution. The disk is placed edge-on with its midplane being aligned along the horizontal.
+  </figcaption>
+</figure>
+
+Note: This page is still in progress.
+
 
 The growth of young terrestrial planets
 ======
