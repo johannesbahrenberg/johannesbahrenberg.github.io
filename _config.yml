@@ -23,7 +23,7 @@ repository               : "johannesbahrenberg/johannesbahrenberg.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "johannes-bahrenberg-profile.jpg"
   name             : "Johannes Bahrenberg"
   pronouns         : # example: "she/her"  
   bio              : "PhD student, Max-Planck-Institut für Astronomie (MPIA), Planet Formation and Exoplanets Department"
