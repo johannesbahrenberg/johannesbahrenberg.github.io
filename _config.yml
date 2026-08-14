@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "air" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "sunrise" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Johannes Bahrenberg"
-title_separator          : "-"
+title_separator          : ""
 name                     : &name "Johannes Bahrenberg"
 description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://johannesbahrenberg.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
@@ -23,11 +23,11 @@ repository               : "johannesbahrenberg/johannesbahrenberg.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "johannes-bahrenberg-profile.png"
+  avatar           : "images/johannes-bahrenberg-profile.png"
   name             : "Johannes Bahrenberg"
   pronouns         : # example: "she/her"  
   bio              : "Computational Astrophysics"
-  location         : "Königstuhl 17, 69117 Heidelberg"
+  location         : "Heidelberg (Germany)"
   employer         : "Max-Planck-Institut für Astronomie"
   uri              : # URL
   email            : "bahrenberg@mpia.de" 
