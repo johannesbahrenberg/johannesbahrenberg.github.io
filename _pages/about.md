@@ -13,7 +13,9 @@ I am a PhD student at the Max Planck Institute for Astronomy in Heidelberg. My c
 1. Non-ideal magneto-hydrodynamics
 1. Radiative transfer
 
-![Simulation of the density and magnetic field evolution of a protoplanetary disk](/images/background_bpol-rho-vpol.pdf)
+<img src="/images/background.png"
+     alt="Simulation of the density and magnetic field evolution of a protoplanetary disk"
+     style="width: 300%;">
 
 The growth of young terrestrial planets
 ======
