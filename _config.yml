@@ -23,10 +23,10 @@ repository               : "johannesbahrenberg/johannesbahrenberg.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/johannes-bahrenberg-profile.png"
+  avatar           : "johannes-bahrenberg-profile.png"
   name             : "Johannes Bahrenberg"
   pronouns         : # example: "she/her"  
-  bio              : "Computational Astrophysicist"
+  bio              : "Computational Astrophysics"
   location         : "Königstuhl 17, 69117 Heidelberg"
   employer         : "Max-Planck-Institut für Astronomie"
   uri              : # URL
