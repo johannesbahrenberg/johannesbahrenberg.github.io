@@ -24,15 +24,21 @@ The focus of my PhD lies in understanding how magnetic fields of different stren
 The following is a list of my main science projects, sorted by most recent.
 
 The effect of realistic, radiative transfer simualtion inspired, temperature profiles onto inner disk MHD evolution
-======
+------
 Max-Planck-Instiut für Astronomie (MPIA), Heidelberg, Germany - supervised by Dr. Mario Flock
 
+
+
 Predicting exoplanet's interiors more accurately
-======
+------
 Deutsches Zentrum für Luft- und Raumfahrt (DLR), Berlin, Germany. Supervised by Dr. Nicola Tosi
 
+Even though several thousand exoplanets have already been detected, in most cases only their mass and radius can be determined. Despite this limited information, it is possible to make statistical inferences about the planets’ internal composition. To this end, ExoMDN [Baumeister and Tosi (2023)](https://www.aanda.org/articles/aa/pdf/2023/08/aa46216-23.pdf) was developed—a neural network that was trained on millions of synthetic planets whose internal structure is known. I improved the atmospheric model of these synthetic planets and demonstrated that the new model results in significant differences in the mass-radius relationship. This paves the way for a more realistic assessment of the internal structure of exoplanets as part of the future PLATO mission (ESA).
+The results of this work were presented at EGU25, Vienna, Austria in 2025 [Baumeister, Bahrenberg, et. al.](https://ascl.net/2503.013).
+
+
 Simulating how warped protoplanetary disks occur in observations
-======
+------
 Institut für Theoretische Astrophysik (ITA), Heidelberg, Germany. Supervised by Prof. Dr. Kees Dullemond
 
 
@@ -50,12 +56,6 @@ For site content, there is one Markdown file for each type of content, which are
 The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
 ) that converts a CSV containing structured data about talks or presentations into individual Markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the Markdown files, then commit and push them to the GitHub repository.
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and Markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
-
-Example: editing a Markdown file for a talk
-![Editing a Markdown file for a talk](/images/editing-talk.png)
 
 For more info
 ------
