@@ -25,21 +25,21 @@ The following is a list of my main science projects, sorted by most recent.
 
 The effect of realistic, radiative transfer simualtion inspired, temperature profiles onto inner disk MHD evolution
 ------
-Max-Planck-Instiut für Astronomie (MPIA), Heidelberg, Germany - supervised by Dr. Mario Flock
+Max-Planck-Instiut für Astronomie (MPIA), Heidelberg, Germany - supervised by Dr. Mario Flock.
 
 
 
-Predicting exoplanet's interiors more accurately
+Predicting exoplanet interiors more accurately
 ------
-Deutsches Zentrum für Luft- und Raumfahrt (DLR), Berlin, Germany. Supervised by Dr. Nicola Tosi
+Deutsches Zentrum für Luft- und Raumfahrt (DLR), Berlin, Germany. Supervised by Dr. Nicola Tosi.
 
-Even though several thousand exoplanets have already been detected, in most cases only their mass and radius can be determined. Despite this limited information, it is possible to make statistical inferences about the planets’ internal composition. To this end, ExoMDN [Baumeister and Tosi (2023)](https://www.aanda.org/articles/aa/pdf/2023/08/aa46216-23.pdf) was developed—a neural network that was trained on millions of synthetic planets whose internal structure is known. I improved the atmospheric model of these synthetic planets and demonstrated that the new model results in significant differences in the mass-radius relationship. This paves the way for a more realistic assessment of the internal structure of exoplanets as part of the future PLATO mission (ESA).
-The results of this work were presented at EGU25, Vienna, Austria in 2025 [Baumeister, Bahrenberg, et. al.](https://ascl.net/2503.013).
+Even though several thousand exoplanets have already been detected, in most cases only their mass and radius can be determined. Despite this limited information, it is possible to make statistical inferences about the planets’ internal composition. To this end, ExoMDN ([Baumeister and Tosi 2023)](https://www.aanda.org/articles/aa/pdf/2023/08/aa46216-23.pdf)) was developed—a neural network that was trained on millions of synthetic planets whose internal structure is known. I improved the atmospheric model of these synthetic planets and demonstrated that the new model results in significant differences in the mass-radius relationship. This paves the way for a more realistic assessment of the internal structure of exoplanets as part of the future PLATO mission (ESA).
+The results of this work were presented at EGU25, Vienna, Austria in 2025 ([Baumeister, Bahrenberg et. al.](https://ascl.net/2503.013)).
 
 
 Simulating how warped protoplanetary disks occur in observations
 ------
-Institut für Theoretische Astrophysik (ITA), Heidelberg, Germany. Supervised by Prof. Dr. Kees Dullemond
+Institut für Theoretische Astrophysik (ITA), Heidelberg, Germany. Supervised by Prof. Dr. Kees Dullemond.
 
 
 
