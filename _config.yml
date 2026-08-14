@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "sunrise" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "contrast" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Johannes Bahrenberg"
 title_separator          : ""
 name                     : &name "Johannes Bahrenberg"
@@ -26,9 +26,9 @@ author:
   avatar           : "/images/johannes-bahrenberg-profile.png"
   name             : "Johannes Bahrenberg"
   pronouns         : # example: "she/her"  
-  bio              : "Computational Astrophysics"
-  location         : "Heidelberg (Germany)"
-  employer         : "Max-Planck-Institut für Astronomie"
+  bio              : "PhD student, Max-Planck-Institut für Astronomie (MPIA), Planet Formation and Exoplanets Department"
+  location         : "Heidelberg, Germany"
+  employer         : #"Max-Planck-Institut für Astronomie"
   uri              : # URL
   email            : "bahrenberg@mpia.de" 
 
