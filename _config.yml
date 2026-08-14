@@ -23,7 +23,7 @@ repository               : "johannesbahrenberg/johannesbahrenberg.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/johannes-bahrenberg-profile.png"
+  avatar           : "/images/johannes-bahrenberg-profile.png"
   name             : "Johannes Bahrenberg"
   pronouns         : # example: "she/her"  
   bio              : "Computational Astrophysics"
