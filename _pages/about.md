@@ -35,7 +35,7 @@ Predicting exoplanet interiors more accurately
 ------
 Deutsches Zentrum für Luft- und Raumfahrt (DLR), Berlin, Germany. Supervised by Dr. Nicola Tosi.
 
-Even though several thousand exoplanets have already been detected, in most cases only their mass and radius can be determined. Despite this limited information, it is possible to make statistical inferences about the planets’ internal composition. To this end, ExoMDN ([Baumeister and Tosi 2023](https://www.aanda.org/articles/aa/pdf/2023/08/aa46216-23.pdf)) was developed—a neural network that was trained on millions of synthetic planets whose internal structure is known. I improved the atmospheric model of these synthetic planets and demonstrated that the new model results in significant differences in the mass-radius relationship. This paves the way for a more realistic assessment of the internal structure of exoplanets as part of the future PLATO mission (ESA).
+Even though several thousand exoplanets have already been detected, in most cases only their mass and radius can be determined. Despite this limited information, it is possible to make statistical inferences about the planets’ internal composition. To this end, ExoMDN was developed, a neural network that was trained on millions of synthetic planets whose internal structure is known. I improved the atmospheric model of these synthetic planets and demonstrated that the new model results in significant differences in the mass-radius relationship. This paves the way for a more realistic assessment of the internal structure of exoplanets as part of the future PLATO mission (ESA).
 The results of this work were presented at EGU25, Vienna, Austria in 2025 ([Baumeister, Bahrenberg et. al.](https://meetingorganizer.copernicus.org/EGU25/EGU25-15903.html)).
 
 
@@ -47,17 +47,8 @@ Although often referred to as protoplanetary disks, many observations reveal sig
 
 
 ------
-<iframe
-  width="100%"
-  height="500"
-  src="https://youtu.be/embed/MiDLtZo7-KA?si=3888G96Msh4RaMWT"
-  title="This is a test video"
-  frameborder="0"
-  allowfullscreen>
-</iframe>
-------
 <figure>
-  <video controls width="100%">
+  <video controls width="25%">
     <source src="/videos/test_video_rho.mp4" type="video/mp4">
   </video>
   <figcaption>
