@@ -23,9 +23,11 @@ The focus of my PhD lies in understanding how magnetic fields of different stren
 
 The following is a list of my main science projects, sorted by most recent.
 
-The effect of realistic, radiative transfer simualtion inspired, temperature profiles onto inner disk MHD evolution
+The effect of realistic temperature profiles onto inner disk MHD evolution
 ------
-Max-Planck-Instiut für Astronomie (MPIA), Heidelberg, Germany - supervised by Dr. Mario Flock.
+Max-Planck-Institut für Astronomie (MPIA), Heidelberg, Germany - supervised by Dr. Mario Flock.
+
+Magnetic fields generally do not affect the motion of fluids in our everyday lives. However, the inner regions of protoplanetary disks (including the region where Earth is located today) reach high temperatures of up to several thousand Kelvin, causing the material to become partially ionized and form a plasma. As a result, the omnipresent magnetic fields interact with the disks, which has a decisive impact on the evolution of the disk and the future planets. Using non-ideal MHD simulations with the PLUTO code, I am investigating how protoplanetary disks respond to different magnetic fields and how magnetic winds and magnetic flux differ. A novel approach is that, instead of simple power-law assumptions for the temperature profile, I use a realistic temperature profile inspired by radiative transfer simulations. These differ in particular in the region of the disk’s condensation front and produce significant differences in disk evolution. I have discovered and quantified that the magnetic wind is activated above a certain magnetic field strength and that the disk atmosphere can be divided into three dynamically distinct regions ([Bahrenberg and Flock, in prep.]()).
 
 
 
@@ -33,8 +35,8 @@ Predicting exoplanet interiors more accurately
 ------
 Deutsches Zentrum für Luft- und Raumfahrt (DLR), Berlin, Germany. Supervised by Dr. Nicola Tosi.
 
-Even though several thousand exoplanets have already been detected, in most cases only their mass and radius can be determined. Despite this limited information, it is possible to make statistical inferences about the planets’ internal composition. To this end, ExoMDN ([Baumeister and Tosi 2023)](https://www.aanda.org/articles/aa/pdf/2023/08/aa46216-23.pdf)) was developed—a neural network that was trained on millions of synthetic planets whose internal structure is known. I improved the atmospheric model of these synthetic planets and demonstrated that the new model results in significant differences in the mass-radius relationship. This paves the way for a more realistic assessment of the internal structure of exoplanets as part of the future PLATO mission (ESA).
-The results of this work were presented at EGU25, Vienna, Austria in 2025 ([Baumeister, Bahrenberg et. al.](https://meetingorganizer.copernicus.org/EGU25/EGU25-15903.html).
+Even though several thousand exoplanets have already been detected, in most cases only their mass and radius can be determined. Despite this limited information, it is possible to make statistical inferences about the planets’ internal composition. To this end, ExoMDN ([Baumeister and Tosi 2023](https://www.aanda.org/articles/aa/pdf/2023/08/aa46216-23.pdf)) was developed—a neural network that was trained on millions of synthetic planets whose internal structure is known. I improved the atmospheric model of these synthetic planets and demonstrated that the new model results in significant differences in the mass-radius relationship. This paves the way for a more realistic assessment of the internal structure of exoplanets as part of the future PLATO mission (ESA).
+The results of this work were presented at EGU25, Vienna, Austria in 2025 ([Baumeister, Bahrenberg et. al.](https://meetingorganizer.copernicus.org/EGU25/EGU25-15903.html)).
 
 
 Simulating how warped protoplanetary disks occur in observations
