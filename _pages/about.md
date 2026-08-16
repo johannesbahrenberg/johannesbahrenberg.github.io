@@ -48,9 +48,18 @@ Although often referred to as protoplanetary disks, many observations reveal sig
 <iframe
   width="100%"
   height="500"
-  src="https://youtu.be/MiDLtZo7-KA?si=3888G96Msh4RaMWT"
+  src="https://youtu.be/embed/MiDLtZo7-KA?si=3888G96Msh4RaMWT"
   title="This is a test video"
   frameborder="0"
   allowfullscreen>
 </iframe>
 ------
+<figure>
+  <video controls width="100%">
+    <source src="/videos/test_video_rho.mp4" type="video/mp4">
+  </video>
+  <figcaption>
+    Evolution of the density in the protoplanetary disk.
+  </figcaption>
+</figure>
+-------
