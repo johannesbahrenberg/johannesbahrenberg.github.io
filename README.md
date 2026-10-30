@@ -1,101 +1,54 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Personal academic website
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+Plain HTML and CSS, no build step. Works on GitHub Pages as is.
 
-# Getting Started
+## Put it online
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+1. On GitHub, create a public repository named exactly `your-username.github.io`.
+2. Upload everything in this folder (or `git clone` the repo, copy the files in, then `git add . && git commit -m "First version" && git push`).
+3. In the repository, go to Settings → Pages and set the source to "Deploy from a branch", branch `main`, folder `/ (root)`.
+4. After a minute or two the site is live at `https://your-username.github.io`.
 
-See more info at https://academicpages.github.io/
+To preview locally, open `index.html` in a browser, or run `python3 -m http.server` in this folder and go to http://localhost:8000.
 
-### Additional Tutorials
+## What to edit
 
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
+| File | What it is |
+| --- | --- |
+| `index.html` | Home: name, role, about text, profile links, recent news |
+| `research.html` | One block per project, each with a figure and a short description |
+| `publications.html` | Paper list, grouped by year |
+| `CV.pdf` | Replace with your own CV (keep the file name) |
+| `images/hero.jpg` | Background of the header (placeholder star field) |
+| `images/portrait.svg` | Replace with your photo, e.g. `images/portrait.jpg`, and update the `src` in `index.html` |
+| `images/research/` | Your figures |
+| `assets/css/style.css` | All styling; colours are at the top in `:root` |
 
-## Running locally
+Everything in `[square brackets]` is placeholder text. Search for `Your Name`, `your-username`, `your.name@` and `0000-0000` to find the rest.
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+The navigation is repeated at the top of each page. If you add a page, copy an existing one and add the link to the menu in every file.
 
-1. Clone the repository and made updates as detailed above.
+## Adding a project
 
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
+In `research.html`, copy one whole `<article class="project"> … </article>` block and paste it where it belongs (newest first). Change the title, the line below it, the image path, the caption, the alt text and the paragraphs. The layout alternates left/right by itself, and figures are numbered automatically.
 
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+## Figures for the web
 
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
+- Save at about 1200–1600 px wide: in Matplotlib, `fig.savefig("name.png", dpi=150)` with a figure around 8–10 inches wide.
+- Use larger fonts than in papers (`plt.rcParams["font.size"] = 15`); many people will read on a phone.
+- Keep each file under about 300 KB. For photos and images with noise, JPEG or WebP is much smaller than PNG.
+- Update the `width` and `height` attributes on the `<img>` tag to the real pixel size of your file, so the page doesn't jump while loading.
+- Write `alt` text that says what the figure shows, for screen readers.
+- Telescope images: NASA, ESA and ESO images can usually be reused with a credit line. Check the source's terms and put the credit in the caption (or in `.hero__credit` for the header image).
 
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
+## Header image
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+Any wide image works (at least 2000 px wide, darker in the lower left where your name sits). Save it as `images/hero.jpg`, or change the file name near the top of `.hero` in `style.css`. Update the credit line in `index.html`.
 
-## Using Docker
+## Fonts and privacy
 
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
+Fonts (Spectral and Instrument Sans, both under the SIL Open Font License) are stored in `assets/fonts/`, so the site makes no requests to Google or other third parties. If you add analytics or embedded content later, check what data it sends; in Germany and the EU this can create GDPR obligations. If you are in Germany, also check whether you need an Impressum (legal notice) page.
 
-You can build and execute the container by running the following command in the repository:
+## Custom domain (optional)
 
-```bash
-chmod -R 777 .
-docker compose up
-```
-
-You should now be able to access the website from `localhost:4000`.
-
-### Using the DevContainer in VS Code
-
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
-
-# Maintenance
-
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
-
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
-
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+Buy a domain, add a file named `CNAME` containing just the domain (e.g. `yourname.com`), and follow GitHub's "Managing a custom domain" guide for the DNS settings.
