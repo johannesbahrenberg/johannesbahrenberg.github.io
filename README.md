@@ -1,4 +1,4 @@
-# Personal academic website
+#Personal academic website
 
 Plain HTML and CSS, no build step. Works on GitHub Pages as is.
 
