@@ -42,16 +42,18 @@
   unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
 
 /* ---------- Design tokens ---------- */
+/* Dark is the default. Light applies when the visitor picks it
+   (the button sets data-theme="light" on <html>). */
 :root {
-  --paper: #F6F7F9;          /* page background */
-  --paper-alt: #ECEFF4;      /* alternate section background */
-  --ink: #17203A;            /* main text, deep navy */
-  --muted: #566079;          /* secondary text */
-  --rule: #D9DEE7;           /* thin lines */
-  --accent: #1C6B73;         /* links: an [O III]-teal */
-  --accent-strong: #11494F;
+  --paper: #0E1426;          /* page background */
+  --paper-alt: #131A30;      /* alternate section background */
+  --ink: #E4E8F1;            /* main text */
+  --muted: #9AA3B8;          /* secondary text */
+  --rule: #273049;           /* thin lines */
+  --accent: #7CC6CD;         /* links: an [O III]-teal */
+  --accent-strong: #AEE0E4;
   --plate: #FFFFFF;          /* background behind figures */
-  --night: #0B1124;          /* hero fallback colour */
+  --night: #0B1124;          /* header fallback colour (header is dark in both modes) */
   --on-night: #EEF1F7;
   --on-night-muted: rgba(238, 241, 247, 0.78);
 
@@ -61,21 +63,18 @@
   --measure: 38rem;          /* comfortable line length for body text */
   --wide: 72rem;             /* page width */
   --gutter: clamp(1.25rem, 5vw, 3rem);
-  color-scheme: light;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #0E1426;
-    --paper-alt: #131A30;
-    --ink: #E4E8F1;
-    --muted: #9AA3B8;
-    --rule: #273049;
-    --accent: #7CC6CD;
-    --accent-strong: #AEE0E4;
-    --plate: #FFFFFF;
-    color-scheme: dark;
-  }
+:root[data-theme="light"] {
+  --paper: #F6F7F9;
+  --paper-alt: #ECEFF4;
+  --ink: #17203A;
+  --muted: #566079;
+  --rule: #D9DEE7;
+  --accent: #1C6B73;
+  --accent-strong: #11494F;
+  color-scheme: light;
 }
 
 /* ---------- Base ---------- */
@@ -170,7 +169,7 @@ a:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
 .site-nav__name { color: inherit; text-decoration: none; font-weight: 500; }
 .site-nav__name:hover { color: inherit; }
 .site-nav__links {
-  display: flex; gap: 1.75rem;
+  display: flex; align-items: center; gap: 1.75rem;
   list-style: none; margin: 0 0 0 auto; padding: 0;
 }
 .site-nav__links a {
@@ -193,12 +192,37 @@ a:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
   cursor: pointer;
 }
 
+/* Light/dark button: shown only when JavaScript runs, since it needs it */
+.site-nav__theme { display: none; }
+.js .site-nav__theme { display: block; }
+.theme-toggle {
+  display: inline-flex; align-items: center;
+  font: 500 0.9rem/1 var(--sans);
+  color: var(--on-night);
+  background: rgba(238, 241, 247, 0.08);
+  border: 1px solid rgba(238, 241, 247, 0.5);
+  border-radius: 999px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.theme-toggle:hover { background: rgba(238, 241, 247, 0.18); border-color: var(--on-night); }
+.theme-toggle__light, .theme-toggle__dark { display: inline-flex; align-items: center; gap: 0.45rem; }
+.theme-toggle svg { width: 1rem; height: 1rem; flex: none; }
+.theme-toggle__dark { display: none; }
+:root[data-theme="light"] .theme-toggle__light { display: none; }
+:root[data-theme="light"] .theme-toggle__dark { display: inline-flex; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
 @media (max-width: 46rem) {
   .js .site-nav__toggle { display: block; }
   .js .site-nav__links {
     display: none;
     flex-basis: 100%;
-    flex-direction: column; gap: 0;
+    flex-direction: column; align-items: stretch; gap: 0;
     margin: 0; padding: 0.4rem 1rem;
     background: rgba(8, 12, 28, 0.9);
     border: 1px solid rgba(238, 241, 247, 0.15);
@@ -207,6 +231,7 @@ a:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
   .js .site-nav.is-open .site-nav__links { display: flex; }
   .js .site-nav__links a { display: block; padding: 0.75rem 0; border-bottom: 0; }
   .js .site-nav__links li + li { border-top: 1px solid rgba(238, 241, 247, 0.12); }
+  .js .site-nav__links .site-nav__theme { padding: 0.75rem 0; }
   .js .site-nav__links a[aria-current="page"] { text-decoration: underline; text-underline-offset: 0.3em; }
   /* No-JS fallback: links simply wrap under the name */
   .site-nav__links { flex-wrap: wrap; gap: 0.5rem 1.25rem; }
