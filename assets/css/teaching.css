@@ -1,0 +1,106 @@
+/* =========================================================
+   Teaching page. Loaded only by teaching.html, on top of style.css.
+   ========================================================= */
+
+/* Contents list at the top */
+.course-index {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.5rem 3rem;
+  max-width: 48rem; margin: 2.5rem 0 1rem;
+  font-family: var(--sans); font-size: 0.95rem;
+}
+.course-index__label { font-weight: 500; color: var(--muted); margin: 0 0 0.5rem; }
+.course-index ul { list-style: none; margin: 0; padding: 0; }
+.course-index li { padding: 0.2rem 0; }
+.course-index .term { color: var(--muted); }
+
+/* Group headings: "This semester", "Previous courses" */
+.course-group { margin: clamp(3rem, 6vw, 4.5rem) 0 0; }
+.course-group > h2 { margin-bottom: 0.5rem; }
+
+/* One course = one collapsible block */
+.course { border-top: 1px solid var(--rule); }
+.course:last-child { border-bottom: 1px solid var(--rule); }
+.course > summary {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1.5rem;
+  padding: 1.4rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+.course > summary::-webkit-details-marker { display: none; }
+.course > summary:hover h3 { color: var(--accent); }
+.course h3 { font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.7rem); margin: 0 0 0.25rem; }
+.course__term {
+  font-family: var(--sans); font-size: 0.9rem; color: var(--muted); margin: 0;
+  font-variant-numeric: lining-nums;
+}
+/* open/closed chevron */
+.course > summary::after {
+  content: "";
+  width: 0.6rem; height: 0.6rem; margin: 0 0.4rem 0.3rem;
+  border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+.course[open] > summary::after { transform: rotate(-135deg); margin-bottom: -0.2rem; }
+@media (prefers-reduced-motion: reduce) { .course > summary::after { transition: none; } }
+
+.course__body { padding: 0 0 2.5rem; }
+.course__body > p { max-width: var(--measure); }
+
+/* Facts: lecturer, role, time and place, course page */
+.course__facts {
+  display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 0.35rem 1.5rem;
+  max-width: 44rem; margin: 0 0 1.5rem;
+  font-family: var(--sans); font-size: 0.95rem; line-height: 1.5;
+}
+.course__facts dt { color: var(--muted); }
+.course__facts dd { margin: 0; }
+@media (max-width: 36rem) {
+  .course__facts { grid-template-columns: 1fr; gap: 0; }
+  .course__facts dd { margin-bottom: 0.6rem; }
+}
+
+.course h4 {
+  font-family: var(--sans); font-size: 0.95rem; font-weight: 500;
+  margin: 2rem 0 0.75rem;
+}
+
+/* Files that belong to the whole course */
+.file-list {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem;
+  list-style: none; margin: 0; padding: 0;
+  font-family: var(--sans); font-size: 0.95rem;
+}
+.filetype { color: var(--muted); font-size: 0.8rem; margin-left: 0.25rem; }
+
+/* Week-by-week material */
+.materials-wrap { overflow-x: auto; }
+.materials {
+  width: 100%; max-width: 56rem; border-collapse: collapse;
+  font-size: 1.0625rem; line-height: 1.45;
+}
+.materials th {
+  font-family: var(--sans); font-size: 0.85rem; font-weight: 500; color: var(--muted);
+  text-align: left; padding: 0 1rem 0.5rem 0; border-bottom: 1px solid var(--rule);
+}
+.materials td { padding: 0.85rem 1rem 0.85rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.materials .num, .materials .date {
+  font-family: var(--sans); font-size: 0.9rem; color: var(--muted);
+  font-variant-numeric: lining-nums tabular-nums; white-space: nowrap;
+}
+.materials .num { width: 2.5rem; }
+.materials .files { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; font-family: var(--sans); font-size: 0.95rem; }
+.pending { color: var(--muted); }
+
+/* Phones: each week becomes a small block instead of a table row */
+@media (max-width: 40rem) {
+  .materials, .materials tbody { display: block; }
+  .materials thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .materials tr {
+    display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); gap: 0.2rem 0;
+    padding: 0.9rem 0; border-bottom: 1px solid var(--rule);
+  }
+  .materials td { padding: 0; border: 0; }
+  .materials .num { grid-row: 1 / span 3; padding-top: 0.1rem; }
+  .materials .files { margin-top: 0.3rem; }
+}
