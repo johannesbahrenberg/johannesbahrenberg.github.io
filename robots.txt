@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://johannesbahrenberg.github.io/sitemap.xml
