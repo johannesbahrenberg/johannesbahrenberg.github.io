@@ -1,0 +1,50 @@
+/* =========================================================
+   Time slider for simulation snapshots.
+   Loaded only by pages that use it, on top of style.css.
+   ========================================================= */
+
+/* Before the script runs (or without JavaScript): show only the first frame */
+.timeslider > img:not(:first-of-type) { display: none; }
+
+/* All frames sit on top of each other; only the current one is visible */
+.timeslider__frames {
+  display: grid;
+  background: var(--plate);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.75rem;
+}
+.timeslider__frames img { grid-area: 1 / 1; width: 100%; height: auto; opacity: 0; }
+.timeslider__frames img.is-current { opacity: 1; }
+
+/* Play button, slider and time label */
+.timeslider__controls {
+  display: flex; align-items: center; gap: 0.85rem;
+  margin-top: 0.8rem;
+  font-family: var(--sans);
+}
+.timeslider__play {
+  flex: none;
+  display: grid; place-items: center;
+  width: 2.5rem; height: 2.5rem; padding: 0;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.timeslider__play:hover { border-color: var(--muted); }
+.timeslider__play svg { width: 0.95rem; height: 0.95rem; }
+.timeslider__range {
+  flex: 1; min-width: 0;
+  height: 1.75rem; margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.timeslider__label {
+  flex: none; min-width: 7rem; text-align: right;
+  font-size: 0.9rem; color: var(--ink);
+  font-variant-numeric: lining-nums tabular-nums;
+  white-space: nowrap;
+}
+@media (max-width: 30rem) { .timeslider__label { min-width: 0; } }

@@ -1,0 +1,96 @@
+/* =========================================================
+   Info points (+) on the header image.
+   Loaded only by pages that use them, on top of style.css.
+   ========================================================= */
+
+.hero .site-nav { position: relative; z-index: 2; }    /* menu stays above the points */
+
+.hotspots {
+  position: absolute; inset: 0; z-index: 1;
+  pointer-events: none;                                  /* only the buttons and boxes are clickable */
+}
+.hotspots.has-open { z-index: 3; }                       /* an open box sits above everything */
+.hotspots:not(.is-ready) .hotspot { display: none; }     /* hidden until the script has placed them */
+
+/* The round + button */
+.hotspot__btn {
+  position: absolute;
+  width: 2.25rem; height: 2.25rem;
+  margin: -1.125rem 0 0 -1.125rem;                       /* centre the circle on the point */
+  display: grid; place-items: center;
+  padding: 0;
+  color: #fff;
+  background: rgba(8, 12, 28, 0.35);
+  -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.35);  /* visible on bright images too */
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.hotspot__btn[hidden] { display: none; }
+.hotspot__btn svg { width: 0.95rem; height: 0.95rem; transition: transform 0.2s ease; }
+.hotspot__btn:hover { background: rgba(8, 12, 28, 0.6); transform: scale(1.08); }
+.hotspot__btn[aria-expanded="true"] { background: #EEF1F7; color: #0B1124; }
+.hotspot__btn[aria-expanded="true"] svg { transform: rotate(45deg); }   /* + turns into × */
+.hotspot__btn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+/* A soft ring that pulses outwards so visitors notice the points */
+.hotspot__btn::after {
+  content: "";
+  position: absolute; inset: -1.5px;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  animation: hotspot-pulse 2.8s ease-out infinite;
+  pointer-events: none;
+}
+.hotspot__btn[aria-expanded="true"]::after { animation: none; opacity: 0; }
+@keyframes hotspot-pulse {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  70%, 100% { transform: scale(1.9); opacity: 0; }
+}
+
+/* The small explanation box */
+.hotspot {
+  position: absolute;
+  width: min(19rem, calc(100vw - 2rem));
+  padding: 0.95rem 1.1rem 1rem;
+  color: #EEF1F7;
+  background: rgba(9, 13, 30, 0.94);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  border: 1px solid rgba(238, 241, 247, 0.16);
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+  pointer-events: auto;
+}
+.hotspot[hidden] { display: none; }
+.hotspot h2, .hotspot h3 {
+  font-size: 1.15rem; line-height: 1.3; font-weight: 400;
+  margin: 0 0 0.35rem;
+}
+.hotspot p {
+  font-family: var(--sans); font-size: 0.9rem; line-height: 1.5;
+  color: rgba(238, 241, 247, 0.8);
+  margin: 0;
+}
+.hotspot p + p { margin-top: 0.5rem; }
+.hotspot a { color: #EEF1F7; }
+
+/* Helper for placing points: open the page with ?hotspots at the end of the address */
+.hero.is-placing { cursor: crosshair; }
+.hotspot-coords {
+  position: fixed; left: 50%; bottom: 1.25rem; z-index: 50;
+  transform: translateX(-50%);
+  padding: 0.65rem 0.95rem;
+  font: 500 0.9rem/1.4 var(--sans);
+  color: #EEF1F7; background: #0B1124;
+  border: 1px solid rgba(238, 241, 247, 0.25); border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.hotspot-coords code { font-family: ui-monospace, Menlo, Consolas, monospace; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hotspot__btn, .hotspot__btn svg { transition: none; }
+  .hotspot__btn::after { animation: none; opacity: 0; }
+}

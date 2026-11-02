@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Teaching | Your Name</title>
+  <title>Teaching | Johannes Bahrenberg</title>
   <meta name="description" content="Exercise sheets, solutions and code for the courses Your Name teaches at [University].">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔭</text></svg>">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -15,7 +15,7 @@
 
   <header class="hero hero--page">
     <nav class="site-nav" aria-label="Main">
-      <a class="site-nav__name" href="index.html">Your Name</a>
+      <a class="site-nav__name" href="index.html">Johannes Bahrenberg</a>
       <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul class="site-nav__links" id="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -23,6 +23,7 @@
         <li><a href="publications.html">Publications</a></li>
         <li><a href="teaching.html" aria-current="page">Teaching</a></li>
         <li><a href="CV.pdf">CV</a></li>
+        <li><a href="other.html">Other</a></li>
         <li class="site-nav__theme">
           <button class="theme-toggle" type="button">
             <span class="theme-toggle__light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="visually-hidden">Switch to light mode</span></span>
@@ -40,7 +41,7 @@
     <div class="container">
 
       <div class="intro">
-        <p>Exercise sheets, solutions and code for the courses I teach at Heidelberg University.</p>
+        <p>Lecture notes, review materials, and Jupyter notebooks for the courses I teach at Heidelberg University.</p>
       </div>
 
       <!-- Contents. Keep the links in sync with the id="" of each course below. -->
@@ -88,12 +89,12 @@
               <dt>Exercise class</dt> <dd>Thursdays 16:15–17:45, [Building, room]</dd>
             </dl> -->
 
-            <!-- <p>New sheets go online every Thursday after the exercise class. Solutions follow one week later, once everyone has handed in.</p> -->
+            <p>Informationen zum Material (coming soon).</p>
 
-            <h4>General notes</h4>
+            <h4>General</h4>
             <ul class="file-list">
-              <li><a href="teaching/intro-astro-ws2627/formula-sheet.pdf">Formula sheet</a><span class="filetype">PDF</span></li>
-              <li><a href="teaching/intro-astro-ws2627/python-setup.pdf">Setting up Python</a><span class="filetype">PDF</span></li>
+              <li><a href="teaching/intro-astro-ws2627/astro1_lecture_notes.pdf">Meine Vorlesungsnotizen aus WS 20/21 (coming soon)</a><span class="filetype">PDF</span></li>
+              <!-- <li><a href="teaching/intro-astro-ws2627/python-setup.pdf">Setting up Python</a><span class="filetype">PDF</span></li> -->
             </ul>
 
             <h4>Week by week</h4>
@@ -105,15 +106,15 @@
                 <tbody>
                   <!-- Newest week at the bottom, so the numbers count up. Copy a <tr> ... </tr> to add a week. -->
                   <tr>
-                    <td class="num">1</td>
-                    <td class="date">22 Oct</td>
-                    <td>Units, distances and the magnitude system</td>
+                    <td class="num">3</td>
+                    <td class="date">04 Nov</td>
+                    <td>Das Helligkeits- und Magnitudensystem</td>
                     <td><div class="files">
-                      <a href="teaching/intro-astro-ws2627/sheet-01.pdf">Sheet</a>
-                      <a href="teaching/intro-astro-ws2627/solutions-01.pdf">Solutions</a>
+                      <a href="teaching/astro1/astro1_zusammenfassung-magnituden.pdf">Zusammenfassung</a>
+                      <a href="teaching/astro1/astro1_notebook-magnituden.pdf">Juypter Notebook (coming soon)</a>
                     </div></td>
                   </tr>
-                  <tr>
+                  <!-- <tr>
                     <td class="num">2</td>
                     <td class="date">29 Oct</td>
                     <td>Radiation, blackbodies and stellar temperatures</td>
@@ -122,7 +123,7 @@
                       <a href="teaching/intro-astro-ws2627/blackbody.ipynb" download>Notebook</a>
                       <span class="pending">Solutions from 5 Nov</span>
                     </div></td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </div>
@@ -133,77 +134,56 @@
       <section class="course-group" aria-labelledby="previous-title">
         <h2 id="previous-title">Previous courses</h2>
 
-        <details class="course" id="comp-astro-ss26">
+        <details class="course" id="f30">
           <summary>
             <div>
-              <h3>Computational Astrophysics</h3>
-              <p class="course__term">Summer semester 2026, tutorials and coding projects</p>
+              <h3>CCD Photometry in Modern Astronomy</h3>
+              <p class="course__term">Summer semester 2026, advanced laboratory course</p>
             </div>
           </summary>
 
           <div class="course__body">
-            <dl class="course__facts">
-              <dt>Lecturer</dt> <dd>Dr. [Name]</dd>
-              <dt>My role</dt>  <dd>Teaching assistant, Python tutorials</dd>
-            </dl>
 
-            <p>Hands-on sessions on the numerical methods behind modern simulations. Each notebook runs on its own with NumPy and Matplotlib.</p>
+            <p>No course material available here.</p>
 
-            <h4>Week by week</h4>
+            <!-- <h4>Week by week</h4>
             <div class="materials-wrap">
               <table class="materials">
                 <thead>
                   <tr><th scope="col">Week</th><th scope="col">Date</th><th scope="col">Topic</th><th scope="col">Material</th></tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="num">1</td>
-                    <td class="date">23 Apr</td>
-                    <td>Integrating orbits: Euler, leapfrog and energy conservation</td>
-                    <td><div class="files">
-                      <a href="teaching/comp-astro-ss26/sheet-01.pdf">Sheet</a>
-                      <a href="teaching/comp-astro-ss26/orbits.ipynb" download>Notebook</a>
-                    </div></td>
-                  </tr>
-                  <tr>
-                    <td class="num">2</td>
-                    <td class="date">30 Apr</td>
-                    <td>Gravitational N-body systems</td>
-                    <td><div class="files">
-                      <a href="teaching/comp-astro-ss26/sheet-02.pdf">Sheet</a>
-                      <a href="teaching/comp-astro-ss26/nbody.ipynb" download>Notebook</a>
-                    </div></td>
-                  </tr>
-                  <tr>
-                    <td class="num">3</td>
-                    <td class="date">7 May</td>
-                    <td>Fitting models to data with MCMC</td>
-                    <td><div class="files">
-                      <a href="teaching/comp-astro-ss26/sheet-03.pdf">Sheet</a>
-                      <a href="teaching/comp-astro-ss26/mcmc.ipynb" download>Notebook</a>
-                    </div></td>
-                  </tr>
                 </tbody>
               </table>
-            </div>
+            </div> -->
           </div>
         </details>
 
         <!-- A course without public files: just the facts and a sentence. -->
-        <details class="course" id="physics3-ws2526">
+        <details class="course" id="physikA">
           <summary>
             <div>
-              <h3>Physics III: Optics and Waves</h3>
-              <p class="course__term">Winter semester 2025/26, exercise classes</p>
+              <h3>Physik A</h3>
+              <p class="course__term">Winter semester 2024/25, exercise classes</p>
             </div>
           </summary>
 
           <div class="course__body">
-            <dl class="course__facts">
-              <dt>Lecturer</dt> <dd>Prof. [Name]</dd>
-              <dt>My role</dt>  <dd>Tutor for one exercise group</dd>
-            </dl>
-            <p>The material for this course stays on the university’s [Moodle/ILIAS] page. If you need something from it, send me an email.</p>
+            <p>No course material available here.</p>
+          </div>
+        </details>
+
+        <details class="course" id="pap-fourier">
+          <summary>
+            <div>
+              <h3>Fourier Optics</h3>
+              <p class="course__term">Winter semester 2023/24, laboratory course</p>
+            </div>
+          </summary>
+
+          <div class="course__body">
+            <p>An intuitive explanation of Fourier Optics can be found in my <a href="https://github.com/johannesbahrenberg/FourierOpticsPAP">GitHub repository</a>. 
+            It provides a hands-on approach with sound wave examples, interactive notebooks and a visual demonstration of the Fourier components.</p>
           </div>
         </details>
       </section>
@@ -213,11 +193,11 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span data-year>2026</span> Your Name</p>
+      <p>© <span data-year>2026</span> Johannes Bahrenberg</p>
       <ul class="links" aria-label="Elsewhere">
-        <li><a href="mailto:your.name@university.edu">Email</a></li>
-        <li><a href="https://github.com/your-username">GitHub</a></li>
-        <li><a href="https://orcid.org/0000-0000-0000-0000">ORCID</a></li>
+        <li><a href="mailto:bahrenberg@mpia.de">Email</a></li>
+        <li><a href="https://github.com/johannesbahrenberg">GitHub</a></li>
+        <li><a href="https://orcid.org/0009-0000-5723-6899">ORCID</a></li>
       </ul>
     </div>
   </footer>

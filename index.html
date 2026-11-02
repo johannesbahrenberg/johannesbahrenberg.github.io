@@ -8,6 +8,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔭</text></svg>">
   <link rel="preload" href="assets/fonts/spectral-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/hotspots.css">
   <script>document.documentElement.classList.add("js");try{if(localStorage.getItem("theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
 </head>
 <body>
@@ -22,6 +23,7 @@
         <li><a href="publications.html">Publications</a></li>
         <li><a href="teaching.html">Teaching</a></li>
         <li><a href="CV.pdf">CV</a></li>
+        <li><a href="other.html">Other</a></li>
         <li class="site-nav__theme">
           <button class="theme-toggle" type="button">
             <span class="theme-toggle__light"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="visually-hidden">Switch to light mode</span></span>
@@ -36,8 +38,50 @@
       <p class="hero__role">PhD student in computational astrophysics<br>MPIA, Heidelberg, Germany</p>
     </div>
 
-    <!-- Replace images/hero.jpg with your own photo, or a telescope image you are allowed to use, and credit it here. -->
-    <p class="hero__credit">Background: placeholder star field. Replace with your own photo or a credited telescope image.</p>
+    <div class="hotspots">
+     <div class="hotspot" data-x="50" data-y="50">
+       <h2>The inner boundary</h2>
+       <p>The disk is circling around a Herbig Ae star with 2.5 solar masses, which dominates the heating in the disk.
+         The inner boundary lies close to the star, at 0.1 au.</p>
+     </div>
+     <div class="hotspot" data-x="75" data-y="75">
+       <h2>Photo-evaporative wind</h2>
+       <p>Thermally induced, largely laminar outflow with 4-6 km /s speed above the disk surface. 
+        <a href="research.html">More in Research</a>.</p>
+     </div>
+     <div class="hotspot" data-x="43" data-y="53">
+       <h2>The dead zone inner edge (DZIE)</h2>
+       <p>Connects regions with well (active) and poor (dead) coupling of material and magnetic field.  At the DZIE pressure maxima 
+        occur and pebbles are trapped, eventually forming a planet. Therefore, its exact location is crucial.</p>
+       <p>I tackle this in my simulations by combining an analytical temperature prescription with detailed magnetic 
+        resistivity tables. </p>
+     </div>
+     <div class="hotspot" data-x="65" data-y="44">
+       <h2>Gap formation</h2>
+       <p>The surface density is reduced due to a high concentration of magnetic flux (see left side). This indicates that gaps can form
+        purely through magnetic effects, without planets carving them.</p>
+     </div>
+     <div class="hotspot" data-x="58" data-y="30">
+       <h2>Magnetic wind</h2>
+       <p>Fast outflows with high turbulence, efficiently removing disk material and angular momentum from the disk. 
+        This wind structure is mirroring the magnetic field structure on the left.</p>
+     </div>
+     <div class="hotspot" data-x="29" data-y="35">
+       <h2>Strong magnetic field bands</h2>
+       <p>Large magnetic flux (strong, dense field lines) is carrying material efficiently away from the disk surface, potentially carving gaps.</p>
+     </div>
+     <div class="hotspot" data-x="50" data-y="15">
+       <h2>Wide polar domain</h2>
+       <p>The domain comes within 0.001 rad of the poles, thus allowing conclusions to be drawn about 
+        movements high up in the atmosphere, e.g. potential jets.</p>
+     </div>
+   </div>
+
+    <p class="hero__credit">Magneto-hydrodynamics simulation of a protoplanetary disk showing winds and magnetic flux
+       concentration. 
+       <I>Left:</I> Poloidal magnetic field. 
+       <I>Right:</I> Density and poloidal velocity streams. For more details, 
+       see <a href="https://ui.adsabs.harvard.edu/">Bahrenberg et al. (in prep.)</a>.</p>
   </header>
 
   <main id="main">
@@ -47,14 +91,15 @@
 
         <div class="prose">
           <h2>About me</h2>
-          <p>Hi, I’m a second-year PhD student at Max Planck Institute for Astronomy (<a href="https://www.mpia.de">MPIA</a>), 
+          <p>Hi, I’m a second-year PhD student at Max Planck Institute for Astronomy (<a href="https://www.mpia.de/en">MPIA</a>), 
             working with Mario Flock and the <a href="https://flock.www3.mpia.de">RAPTOR</a> group. I study the effect of magnetic
             fields on protoplanetary disk evolution and planet formation via numerical magneto-hydrodynamics simulations.</p>
-          <p>To do that I combine [your methods: numerical simulations, observations with JWST, ALMA or the VLT, analytical 
-            models]. Right now I’m focused on [your current project in one sentence]. You can read more about current and 
-            past projects on the <a href="research.html">research page</a>.</p>
+          <p>In order to study how magnetic fields affect protoplanetary disks, I perform high performance simulations with the 
+            PLUTO code. Right now I’m focused on distinct features of magnetic and photo-evaporative winds, which both launch material 
+            from the disk surface. With a background in radiative transfer simulations, I aim to connect the physical processes 
+            in protoplanetary disks to observable signatures (see <a href="research.html">Research</a>).</p>
           <p>Before my PhD I studied Physics at Heidelberg University and worked at German Aerospace Center (DLR) in Berlin. 
-            Outside of research I [one or two things you enjoy; this makes the page feel like a person].</p>
+            Outside of research I enjoy exploring the outdoors on my bicycle.</p>
         
 
           <ul class="links" aria-label="Profiles and contact">
@@ -74,16 +119,12 @@
         <!-- Keep 3 to 5 items; newest first. Delete this section if you'd rather not maintain it. -->
         <ul class="news">
           <li>
-            <time datetime="2026-10">October 2026</time>
-            <p>My first-author paper on [topic] was accepted in <i>The Astrophysical Journal</i>. <a href="research.html">Read the summary</a>.</p>
+            <time datetime="2027-12">February 2027</time>
+            <p>Upcoming conference with contributing talk at Break-Game-Set conference [Sexten, Italy].</p>
           </li>
           <li>
-            <time datetime="2026-07">July 2026</time>
-            <p>Gave a contributed talk at [Conference], [City].</p>
-          </li>
-          <li>
-            <time datetime="2026-03">March 2026</time>
-            <p>Our observing proposal for [telescope/instrument] was approved.</p>
+            <time datetime="2026-12">December 2026</time>
+            <p>Workshop on protoplanetary disks [Torino, Italy].</p>
           </li>
         </ul>
       </div>
@@ -94,13 +135,14 @@
     <div class="container">
       <p>© <span data-year>2026</span> Johannes Bahrenberg</p>
       <ul class="links" aria-label="Elsewhere">
-        <li><a href="mailto:your.name@university.edu">Email</a></li>
-        <li><a href="https://github.com/your-username">GitHub</a></li>
-        <li><a href="https://orcid.org/0000-0000-0000-0000">ORCID</a></li>
+        <li><a href="mailto:bahrenberg@mpia.de">Email</a></li>
+        <li><a href="https://github.com/johannesbahrenberg">GitHub</a></li>
+        <li><a href="https://orcid.org/0009-0000-5723-6899">ORCID</a></li>
       </ul>
     </div>
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/hotspots.js"></script>
 </body>
 </html>
