@@ -15,8 +15,8 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 MAX_SIDE = 2000
-#QUALITY = 82
-QUALITY = 100
+QUALITY = 82
+#QUALITY = 100
 
 src, dst = Path(sys.argv[1]).expanduser(), Path(sys.argv[2]).expanduser()
 dst.mkdir(parents=True, exist_ok=True)

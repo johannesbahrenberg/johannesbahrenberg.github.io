@@ -1,0 +1,83 @@
+/* =========================================================
+   Comparison slider: two images on top of each other, with a
+   divider you drag left and right.
+   Loaded only by pages that use it, on top of style.css.
+   ========================================================= */
+
+/* Without JavaScript: the two images simply appear one after the other */
+.compare > img { display: block; width: 100%; height: auto; }
+.compare > img + img { margin-top: 0.75rem; }
+
+/* White frame, like the other figures */
+.compare__frame {
+  background: var(--plate);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.75rem;
+}
+
+.compare__stage {
+  --pos: 50%;
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  cursor: ew-resize;
+  touch-action: pan-y;          /* phones: swipe sideways to compare, up/down still scrolls */
+  user-select: none;
+  -webkit-user-select: none;
+}
+.compare__stage img {
+  grid-area: 1 / 1;
+  display: block;
+  width: 100%;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+.compare__before { height: auto; }                      /* the left image sets the size */
+.compare__after {
+  height: 100%;
+  object-fit: cover;
+  clip-path: inset(0 0 0 var(--pos));                   /* only the part right of the divider */
+}
+
+.compare__divider {
+  position: absolute; top: 0; bottom: 0; left: var(--pos);
+  width: 2px; margin-left: -1px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+.compare__handle {
+  position: absolute; top: 50%; left: var(--pos);
+  width: 2.75rem; height: 2.75rem;
+  margin: -1.375rem 0 0 -1.375rem;
+  display: grid; place-items: center;
+  padding: 0;
+  color: #fff;
+  background: rgba(8, 12, 28, 0.55);
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  cursor: ew-resize;
+}
+.compare__handle svg { width: 1.3rem; height: 1.3rem; }
+.compare__handle:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+/* Small name tags in the top corners */
+.compare__label {
+  position: absolute; bottom: 0.75rem;
+  max-width: 45%;
+  padding: 0.3rem 0.65rem;
+  font: 500 0.8rem/1.25 var(--sans);
+  color: #fff;
+  background: rgba(8, 12, 28, 0.62);
+  border-radius: 999px;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+.compare__label--left { left: 0.75rem; }
+.compare__label--right { right: 0.75rem; }
+.compare__label.is-hidden { opacity: 0; }
+
+@media (prefers-reduced-motion: reduce) { .compare__label { transition: none; } }

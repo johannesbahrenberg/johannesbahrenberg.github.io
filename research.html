@@ -7,6 +7,7 @@
   <meta name="description" content="Research projects of Your Name, PhD student in astrophysics.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔭</text></svg>">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/compare.css">
   <link rel="stylesheet" href="assets/css/timeslider.css">
   <script>document.documentElement.classList.add("js");try{if(localStorage.getItem("theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
 </head>
@@ -111,17 +112,32 @@ protoplanetary disk</h2>
           <p class="project__meta">German Aerospace Center (DLR), Berlin, Germany. Supervised by <a href="https://nicola-tosi.github.io">Dr. Nicola Tosi</a>.</i></p>
         </header>
 
-        <figure class="figure">
+        <!-- <figure class="figure">
           <a class="figure__plate" href="images/research/example-image.png">
             <img src="images/research/example-image.png" width="1056" height="896" loading="lazy"
                  alt="Inclined disc image on a logarithmic colour scale, showing a bright centre and two bright rings separated by a darker gap.">
           </a>
           <figcaption>Placeholder figure with synthetic data. Images and maps look best with a perceptually uniform colour map such as magma or viridis.</figcaption>
+        </figure> -->
+        <figure class="figure">
+        <div class="compare">
+          <img src="images/research/GJ1412b_sketch_slider.001.png" alt="Synthetic image of planet GJ1412b." data-label="Synthetic image">
+          <img src="images/research/GJ1412b_sketch_slider.002.png" alt="Simulated disc with a gap, a planet and a spiral wake." data-label="Model comparison. The improved model is shown at the top.">
+        </div>
+        <figcaption>Drag the divider to compare the synthetic image of planet GJ1214b to two of its interior models. Left: an artificial image of the planet. Right: different atmosphere models lead 
+          to different interior structures. The bottom panel shows the old, isothermal atmosphere model and the top panel shows the improved, isothermal-adabatic atmosphere model.</figcaption>
         </figure>
+          
 
         <div class="project__body">
-          <p>Even though several thousand exoplanets have already been detected, in most cases only their mass and radius can be determined. Despite this limited information, it is possible to make statistical inferences about the planets’ internal composition. To this end, ExoMDN was developed, a neural network that was trained on millions of synthetic planets whose internal structure is known. I improved the atmospheric model of these synthetic planets and demonstrated that the new model results in significant differences in the mass-radius relationship. This paves the way for a more realistic assessment of the internal structure of exoplanets as part of the future PLATO mission (ESA).</p>
-          <p>The results of this work were presented at the European Geosciences Union, Vienna, Austria in 2025 <a href="https://meetingorganizer.copernicus.org/EGU25/EGU25-15903.html">(Baumeister, Bahrenberg et al. 2025)</a>.</p>
+          <p>Even though several thousand exoplanets have already been detected, in most cases only their mass and radius can be determined. 
+            Despite this limited information, it is possible to make statistical inferences about the planets’ internal composition. To this 
+            end, ExoMDN was developed, a neural network that was trained on millions of synthetic planets whose internal structure is known. 
+            I improved the atmospheric model of these synthetic planets and demonstrated that the new model results in significant differences 
+            in the mass-radius relationship. This paves the way for a more realistic assessment of the internal structure of exoplanets as 
+            part of the future PLATO mission (ESA).</p>
+          <p>The results of this work were presented at the European Geosciences Union, Vienna, Austria in 2025 
+            <a href="https://meetingorganizer.copernicus.org/EGU25/EGU25-15903.html">(Baumeister, Bahrenberg et al. 2025)</a>.</p>
         </div>
       </article>
 
@@ -160,6 +176,7 @@ protoplanetary disk</h2>
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/compare.js"></script>
   <script src="assets/js/timeslider.js"></script>
 </body>
 </html>
